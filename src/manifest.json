@@ -1,0 +1,18 @@
+{
+    "name": "coudan",
+    "version": "0.0.1",
+    "description": "凑运费的时候更方便",
+    "permissions": [
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "page_action": {
+    },
+    "icons": {
+    },
+    "manifest_version": 2
+}
