@@ -45,6 +45,13 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        chrome.runtime.onMessage.addListener(
+            function (request, sender, sendResponse) {
+                var coupons = request.coupons;
+                var selected_items = request.selected_items;
+            });
+    </script>
 </body>
 
 </html>
