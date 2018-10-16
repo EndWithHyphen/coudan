@@ -1,8 +1,9 @@
 {
     "name": "coudan",
     "version": "0.0.1",
-    "description": "凑运费的时候更方便",
+    "description": "凑单的时候更方便",
     "permissions": [
+        "declarativeContent"
     ],
     "background": {
         "scripts": [
@@ -11,8 +12,22 @@
         "persistent": false
     },
     "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "128": "images/icon.png"
+        }
     },
+    "content_scripts":[
+        {
+            "matches": [
+                "https://card.jd.com/cart.action*"
+            ],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
     "icons": {
+            "128": "images/icon.png"
     },
     "manifest_version": 2
 }
